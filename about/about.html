@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey & Skills</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1f242d;
+            color: #fff;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            color: #0ef;
+            text-align: center;
+        }
+        .timeline, .experience-grid, .skills-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .timeline-item, .exp-item, .skill {
+            background: #323946;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .bar {
+            background: #555;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress {
+            height: 100%;
+            background: #0ef;
+        }
+        .html { width: 90%; }
+        .css { width: 85%; }
+        .js { width: 80%; }
+        .react { width: 75%; }
+        .bootstrap { width: 70%; }
+        .c { width: 95%; }
+        .vite { width: 65%; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Journey & Skills</h1>
+    </header>
+    
+    <section id="journey" class="section">
+        <div class="container">
+            <h2>My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>School Level Education</h3>
+                    <p><strong>J/Kokuvil Hindu Primary School</strong> (2009-2014)</p>
+                    <p><strong>J/Kokuvil Hindu College</strong> (2014-2023)</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Web Development</h3>
+                    <p>Self-Learning (Jan 2024) - HTML, CSS, JavaScript, React.js</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>BSc (Hons) in IT & Management</h3>
+                    <p>University of Moratuwa (May 2024)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>My Experience</h2>
+            <div class="experience-grid">
+                <div class="exp-item">💻 Web Development</div>
+                <div class="exp-item">📊 Database Management</div>
+                <div class="exp-item">📱 App Development</div>
+                <div class="exp-item">🔗 API Integration</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-list">
+                <div class="skill"><span>HTML</span><div class="bar"><div class="progress html"></div></div></div>
+                <div class="skill"><span>CSS</span><div class="bar"><div class="progress css"></div></div></div>
+                <div class="skill"><span>JavaScript</span><div class="bar"><div class="progress js"></div></div></div>
+                <div class="skill"><span>React</span><div class="bar"><div class="progress react"></div></div></div>
+                <div class="skill"><span>Bootstrap</span><div class="bar"><div class="progress bootstrap"></div></div></div>
+                <div class="skill"><span>C</span><div class="bar"><div class="progress c"></div></div></div>
+                <div class="skill"><span>Vite.js</span><div class="bar"><div class="progress vite"></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="languages" class="section">
+        <div class="container">
+            <h2>Languages</h2>
+            <p><strong>English:</strong> Fluent</p>
+            <p><strong>Tamil:</strong> Native speaker</p>
+        </div>
+    </section>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const skills = document.querySelectorAll(".progress");
+        skills.forEach(skill => {
+            skill.style.transition = "width 2s ease-in-out";
+        });
+    });
+</script>
+</html>
